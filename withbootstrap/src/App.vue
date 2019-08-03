@@ -1,31 +1,28 @@
 <template>
   <div id="app">
-    <ToDo :id="1"></ToDo>
+    <router-view name="header"></router-view>
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue, } from 'vue-property-decorator';
-import ToDo from './components/ToDo.vue';
+import { Component, Vue } from "vue-property-decorator";
 
 @Component({
-  components: {
-    ToDo,
-  },
-  props: {
-  },
+  components: {}
 })
-
 export default class App extends Vue {}
 </script>
 
-<style lang="scss">
+<style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>
